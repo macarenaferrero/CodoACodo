@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    cursor: url('./images/cursor.cur'), pointer;
+}
+body{
+    background: rgb(230,230,230);
+    color: #000;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 100%; 
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    grid-template-rows: 0.2fr, repeat(4, auto);
+    grid-template-areas: 'nav nav nav'
+    'header header header'
+    'imagen imagen imagen'
+    'body body body'
+    'footer footer footer';
+    font-family: 'Amatic SC', cursive;
+
+}
+
+.divPrints{
+    max-width: 100%; 
+    max-height: auto;
+    margin: 20px auto; 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 'img1 img2 img3'
+    'img4 img5 img6';
+    font-family: 'Amatic SC', cursive;
+    gap: 20px;
+    align-items: inherit;
+    width: 70%;
+}
+
+.img1{
+    grid-area: img1;
+}
+
+.img2{
+    grid-area:img2;
+}
+.img3{
+    grid-area: img3;
+}  
+.img4{
+    grid-area: img4;
+}
+.img5{
+    grid-area: img5;
+}
+.img6{
+    grid-area: img6;
+}
+
+.aboutMe{
+    max-width: 100%; 
+    max-height: auto;
+    margin: 20px auto; 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 3fr;
+    grid-template-areas: 'yoSoyImage yoSoy';
+    font-family: 'Amatic SC', cursive;
+    gap: 20px;
+    align-items: inherit;
+    width: 70%;
+    padding: 20px;
+}
+
+.footer p{
+    margin-bottom: 0%;
+}
+
+.works{
+    display: grid;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'video'
+    'descripcion';
+    justify-content: center;
+    background-color: #000;
+    padding: 20px;
+    align-content: center;
+    margin: auto;
+    height: 400px;
+}
+.video{
+    grid-area: video;
+    justify-items: center;
+    width: 100%;
+    padding: 30px;
+
+}
+.descripcion{
+    grid-area: descripcion;
+    color: #fff;
+    text-align: center;
+    padding-top: 20%;
+    justify-items: end;
+}
+
+.yoSoy{
+    grid-area: yoSoy;
+}
+.yoSoyImage{
+    grid-area: yoSoyImage;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'redes redes derechos';
+    padding: 20px;
+}
+
+.footer .redes{
+    grid-area: redes;
+}
+
+.footer .derechos{
+    grid-area: derechos;
+    align-items:inherit;
+}
+
+.nav{
+    grid-area: nav;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;  
+    grid-template-columns: repeat(5, 2fr);
+    color: #000;
+    font-family: 'Amatic SC', cursive;
+    font-size: 200%;
+    padding-left: 20px;
+}
+
+.contenedor .imagen{
+    grid-area: imagen;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    border-color: transparent;
+    border-style: solid;
+    padding: 20px;
+}
+
+.contenedor .header h1{
+    font-family: 'Delius', cursive;
+    font-size: 300%;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.contenedor .header h3{
+    font-size: 150%;
+    font-family: 'Amatic SC', cursive;
+}
+
+.nav-link{
+    padding-left: 2%;
+}
+
+
+.contenedor .header{
+    background: black;
+    color: #fff;
+    grid-area: header;
+    width: 100%;
+    text-align: center;        
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contenedor .body{
+    background: #fff;
+    grid-area: body; 
+}
+
+.contenedor .footer{
+    background: black;
+    color: #fff;
+    grid-area: footer; 
+    font-family: 'Amatic SC', cursive;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas:
+        'nav nav nav '
+        'header header header'
+        'imagen imagen imagen'
+        'body body body'
+        'footer footer footer';
+    }    
+    .aboutMe{
+        max-width: 100%; 
+        max-height: auto;
+        margin: 20px auto; 
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: 'yoSoyImage' 
+        'yoSoy';
+        font-family: 'Amatic SC', cursive;
+        gap: 20px;
+        align-items: inherit;
+        width: 70%;
+    }
+    .yoSoy{
+        font-size: medium;
+    }
+    .contenedor .nav a{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .contenedor{
+        grid-template-areas: "nav nav nav"
+                             "header header header"
+                             'imagen imagen imagen'
+                             'body body body'
+                             'footer footer footer';        
+    }
+    .contenedor .nav{
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: small;
+        padding: 0;
+        padding-right: 2%;
+        margin: 0;
+    }
+    .contenedor .nav a{
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: small;
+        padding: 0;
+        margin: 0;
+    }
+    .yoSoy{
+        font-size: medium;
+        font-size: small;
+    }
+    .footer{
+        font-size: small;
+    }
+}
+
+.derechos a:active,
+.derechos a:visited,
+.derechos a:link{
+    color: #fff;
+}
+
+.redes a:active,
+.redes a:visited,
+.redes a:link{
+    color: #fff;
+}
+
+.derechos a:hover,
+.redes a:hover{
+    color: rgba(92, 84, 84, 0.8);
+    text-decoration: none;
+    transform: scale(2);
+    transition-duration: 400ms;
+}
+
+/* NO VISITADO*/
+.nav a:link,
+.nav a:visited,
+.nav a:active {
+    text-decoration: none;
+    color: black;
+}
+  
+/* POSICIÓN MAUSE*/
+a:hover {
+color: rgba(126, 15, 15, 0.8);
+text-decoration: none;
+transform: scale(1.5);
+transition-duration: 400ms;
+}
+
+.contenedor .footer .redes{
+align-items: flex-start;
+}
+
+.contenedor .footer .derechos{
+    text-align: right;
+}
+
+form{
+    padding: 20px;
+    font-size: x-large;
+}
+
+
+
+.image.rotacion{
+        -webkit-transform : rotate(66deg); 
+        -moz-transform : rotate(66deg); 
+        -ms-transform : rotate(66deg); 
+        -o-transform : rotate(66deg); 
+        transform : rotate(66deg); 
+}
