@@ -1,11 +1,18 @@
-function qcy(){
-    $(this).scroll(function(){
-        if($(this).scrollTop() > 1) {
-            document.getElementById('image').classList.toggle('rotacion');
-        }        
-    });
-};
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementsByName("validarForm").addEventListener('submit', validarForm); 
+  });
 
-// document.scroll = function(){
-//     document.getElementById('image').classList.toggle('rotacion');
-// }
+
+function validarForm() {    
+    var valorEmail = document.getElementById("email").value;
+    var valorNombre = document.getElementById("nc").value;
+    var valorComentario = document.getElementById("comentario").value;
+    if(valorEmail.length == 0 || valorNombre.length == 0 || valorComentario.length == 0){
+        alert("Debe completar todos los campos.");
+        return 0;
+    }
+
+    alert("Gracias por contactarme.");
+    document.validarForm.submit();
+}
+
