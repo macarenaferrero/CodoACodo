@@ -1,19 +1,20 @@
 
 function validarForm() {
-    if (document.formulario.nc.value.length == 0) {
+    var nombre = document.formulario.nc.value;
+    if (nombre.length == 0) {
         alert("Tiene que escribir su nombre")
         document.formulario.nc.focus()
         return 0;
     }
 
-    email = document.formulario.email.value
+    var email = document.formulario.email.value
     if (email.length == 0) {
         alert("Tiene que introducir un email válido.")
         document.formulario.email.focus()
         return 0;
     }
-
-    if (document.formulario.comentario.value.length == 0) {
+    var comentario = document.formulario.comentario.value;
+    if (comentario.length == 0) {
         alert("No puede enviar un mensaje vacío.")
         document.formulario.comentario.focus()
         return 0;
@@ -21,4 +22,13 @@ function validarForm() {
 
     alert("Muchas gracias por enviar el formulario");
     document.formulario.submit();
+
+    // var link = "loanafferrero@gmail.com"
+    //     + "?cc=loanafferrero@gmail.com"
+    //     + "&nombre=" + escape(document.getElementById('subject').value)
+    //     + "&email=" + escape(document.getElementById('comment').value);
+    // + "&comentario=" + escape(document.getElementById('comment').value);
+
+    // window.location.href = "mailto:" + link;
+
 }
