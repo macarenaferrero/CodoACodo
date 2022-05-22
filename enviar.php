@@ -1,14 +1,13 @@
 <?php 
+	$mysqli = new mysqli("localhost","root","","mensajes") or die("<h2>Error para conectar base de datos</h2>");;
+
 	$nombre = $_POST['nc'];
 	$email = $_POST['email'];
-	$asunto = 'Consulta Web';
-    $header = "FROM:" .$email ."\r\n";
-    $header .= "Reply-To: .$email" ."\r\n";
-	$header .= "X-Mailer: PHP/" . phpversion();
-    $comentario = "Nombre: ".$nombre."<br> Mensaje:".$_POST['comentario'];
+    $comentario = $_POST['comentario'];
 
+	$res = $mysqli->query("INSERT INTO mensajes VALUES ('','$nombre','$email','$comentario')");
 
-	if(@mail('loanafferrero@gmail.com', $asunto, $mensaje, $header)){
-		echo "Correo enviado";
-	}
+	echo'
+	<h2>¡Gracias por contactarte!</h2>';
+	
  ?>
