@@ -1,5 +1,5 @@
 <?php 
-	$mysqli = new mysqli("localhost","root","","mensajes") or die("<h2>Error para conectar base de datos</h2>");;
+	$mysqli = new mysqli("localhost","root","","contactoloana") or die("<h2>Error para conectar base de datos</h2>");;
 
 	$nombre = $_POST['nc'];
 	$email = $_POST['email'];
