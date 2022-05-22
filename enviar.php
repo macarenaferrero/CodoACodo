@@ -7,6 +7,9 @@
 
 	$res = $mysqli->query("INSERT INTO mensajes VALUES ('','$nombre','$email','$comentario')");
 
+	while($f = $res->fetch_object()){
+		echo $f->nombre.' <br/>';
+	}
 	echo'
 	<h2>¡Gracias por contactarte!</h2>';
 	
