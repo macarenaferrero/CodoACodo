@@ -23,12 +23,4 @@ function validarForm() {
     alert("Muchas gracias por enviar el formulario");
     document.formulario.submit();
 
-    // var link = "loanafferrero@gmail.com"
-    //     + "?cc=loanafferrero@gmail.com"
-    //     + "&nombre=" + escape(document.getElementById('subject').value)
-    //     + "&email=" + escape(document.getElementById('comment').value);
-    // + "&comentario=" + escape(document.getElementById('comment').value);
-
-    // window.location.href = "mailto:" + link;
-
 }
