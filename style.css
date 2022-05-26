@@ -305,6 +305,10 @@ img {
   .nav{
     height: 34px;
   }
+  .divPrints img:hover {
+    transform: scale(3);
+    transition-duration: 500ms;
+  }
 
  }
 
