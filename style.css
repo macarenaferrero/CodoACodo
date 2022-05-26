@@ -81,7 +81,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-  background-size: 90%;
+  background-size: 100%;
 }
 
 .yoSoy {
@@ -207,6 +207,7 @@ img {
 
 .nav-link {
   padding-left: 2%;
+  color: #fff;
 }
 
 .contenedor .header {
