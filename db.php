@@ -7,8 +7,15 @@ function conn(){
     $passworddb = "";
     $dbname = "contactoloana";
 
-    $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
-    return $conectar;
+    try {
+        $conn = new PDO("mysql:host=$hostname;dbname=$dbname", $usuariodb, $passworddb);
+        $conn->exec("SET CHARACTER SET utf8");
+        echo "Conexión exitosa";
+        return $conn;
+        } catch (PDOException $e) {
+            print "Error: " . $e->getMessage();
+            die();
+        }
 }
 
 
