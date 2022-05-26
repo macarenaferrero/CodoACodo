@@ -4,9 +4,9 @@ function conn(){
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
     $hostname = 'localhost';
-    $usuariodb = 'id18986582_root';
-    $passworddb = 'Lw2qH(k$TQf+Q5G+';
-    $dbname = 'id18986582_contactoloana';
+    $usuariodb = 'root';
+    $passworddb = '';
+    $dbname = 'contactoloana';
 
     try {
     $conn = new PDO("mysql:host=$hostname;dbname=$dbname", $usuariodb, $passworddb);
