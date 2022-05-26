@@ -306,7 +306,9 @@ img {
   .nav{
     height: 34px;
   }
-
+  .divPrints img:hover {
+    transform: none;
+  }
  }
 
 .derechos a:active,
